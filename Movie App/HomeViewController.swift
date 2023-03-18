@@ -7,23 +7,26 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+struct movies{
+    
+    var movieName: String
+    var movieTime: Int
+    var movieRating: Double
+}
 
+class HomeViewController: UIViewController {
+    
+    
+    @IBOutlet var movieListTableView: UITableView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
-        // Do any additional setup after loading the view.
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
+
+
