@@ -13,5 +13,6 @@ class MoviesTableViewCell: UITableViewCell {
     @IBOutlet var movieNameLabel: UILabel!
     @IBOutlet var movieTimeLabel: UILabel!
     @IBOutlet var movieRatingLabel: UILabel!
+
     
 }
