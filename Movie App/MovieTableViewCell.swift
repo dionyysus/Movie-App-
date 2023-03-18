@@ -1,5 +1,5 @@
 //
-//  MoviesTableViewCell.swift
+//  MovieTableViewCell.swift
 //  Movie App
 //
 //  Created by Gizem Coşkun on 18.03.2023.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MoviesTableViewCell: UITableViewCell {
+class MovieTableViewCell: UITableViewCell {
 
     @IBOutlet var movieImageView: UIImageView!
     @IBOutlet var movieNameLabel: UILabel!

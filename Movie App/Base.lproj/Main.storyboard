@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="103" width="393" height="609"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="209" id="PLx-4b-2gh" customClass="MoviesTableViewCell" customModule="Movie_App" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="209" id="PLx-4b-2gh" customClass="MovieTableViewCell" customModule="Movie_App" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="393" height="209"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PLx-4b-2gh" id="6Iw-YA-STm">
@@ -173,7 +173,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="addToFavoritesButton:" destination="Be8-cW-EQm" eventType="touchUpInside" id="Z4U-K1-AQ0"/>
+                                    <action selector="favoriteButtonTapped" destination="Be8-cW-EQm" eventType="touchUpInside" id="ivU-Pl-53N"/>
                                 </connections>
                             </button>
                         </subviews>
