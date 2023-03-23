@@ -8,17 +8,21 @@
 import UIKit
 
 final class DetailViewController: UIViewController {
-    @IBOutlet private var movieImage: UIImageView!
-    @IBOutlet private var movieName: UILabel!
-    @IBOutlet private var movieRating: UILabel!
-    @IBOutlet private var movieTime: UILabel!
-    @IBOutlet private var movieSynopsis: UITextView!
+    
+    @IBOutlet var movieImageView: UIImageView!
+    @IBOutlet var movieNameLabel: UILabel!
+    @IBOutlet var movieRatingLabel: UILabel!
+    @IBOutlet var movieTimeLabel: UILabel!
+    @IBOutlet var movieSynopsisLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
     
-    @IBAction private func favoriteButtonTapped() {
+    @IBAction func favoriteButtonTapped(_ sender: Any) {
+    }
+    
+    @IBAction func playButtonTapped(_ sender: Any) {
     }
 }
