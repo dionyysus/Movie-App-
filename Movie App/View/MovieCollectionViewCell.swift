@@ -1,18 +1,18 @@
 //
-//  MovieTableViewCell.swift
+//  MovieCollectionViewCell.swift
 //  Movie App
 //
-//  Created by Gizem Coşkun on 18.03.2023.
+//  Created by Gizem Coşkun on 27.03.2023.
 //
 
 import UIKit
 
-class MovieTableViewCell: UITableViewCell {
-
+class MovieCollectionViewCell: UICollectionViewCell {
+    
     @IBOutlet var movieImageView: UIImageView!
     @IBOutlet var movieNameLabel: UILabel!
     @IBOutlet var movieTimeLabel: UILabel!
     @IBOutlet var movieRatingLabel: UILabel!
-
+    
     
 }

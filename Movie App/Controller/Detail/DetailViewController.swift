@@ -17,12 +17,12 @@ final class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
     
     @IBAction func favoriteButtonTapped(_ sender: Any) {
     }
     
     @IBAction func playButtonTapped(_ sender: Any) {
+        
     }
 }
