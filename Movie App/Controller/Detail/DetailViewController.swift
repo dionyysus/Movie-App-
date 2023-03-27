@@ -9,20 +9,22 @@ import UIKit
 
 final class DetailViewController: UIViewController {
     
-    @IBOutlet var movieImageView: UIImageView!
-    @IBOutlet var movieNameLabel: UILabel!
-    @IBOutlet var movieRatingLabel: UILabel!
-    @IBOutlet var movieTimeLabel: UILabel!
-    @IBOutlet var movieSynopsisLabel: UILabel!
+    @IBOutlet private var movieImageView: UIImageView!
+    @IBOutlet private var movieNameLabel: UILabel!
+    @IBOutlet private var movieRatingLabel: UILabel!
+    @IBOutlet private var movieTimeLabel: UILabel!
+    @IBOutlet private var movieSynopsisLabel: UILabel!
+    @IBOutlet private var timeStackView: UIStackView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //timeStackView.isHidden = true
+    }
+    //sendersiz
+    @IBAction private func  favoriteButtonTapped(_ sender: Any) {
     }
     
-    @IBAction func favoriteButtonTapped(_ sender: Any) {
-    }
-    
-    @IBAction func playButtonTapped(_ sender: Any) {
+    @IBAction private func playButtonTapped(_ sender: Any) {
         
     }
 }

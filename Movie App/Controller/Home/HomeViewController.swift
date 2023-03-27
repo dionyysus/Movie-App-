@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class HomeViewController: UIViewController {
+final class HomeViewController: UIViewController, UICollectionViewDelegate {
 
     @IBOutlet private var movieCollectionView: UICollectionView!
     
@@ -19,41 +19,32 @@ final class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        movieCollectionView.delegate = self
+        //movieCollectionView.delegate = self
         movieCollectionView.dataSource = self
     }
 }
 
 extension HomeViewController: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return moviesArray.count
+        moviesArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let movie = moviesArray[indexPath.row]
-           
-           if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "movieCell", for: indexPath) as? MovieCollectionViewCell {
-               cell.movieImageView.image = UIImage(named: movie.imageUrl)
-               cell.movieNameLabel.text = movie.name
-               cell.movieTimeLabel.text = movie.time
-               cell.movieRatingLabel.text = movie.rating
-               return cell
-               
-           } else {
-               return UICollectionViewCell()
-           }
+ 
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "movieCell", for: indexPath) as? MovieCollectionViewCell else {
+            return .init()
+        }
+        
+        cell.movieImageView.image = UIImage(named: movie.imageUrl)
+        cell.movieNameLabel.text = movie.name
+        cell.movieTimeLabel.text = movie.time
+        cell.movieRatingLabel.text = movie.rating
+        
+        return cell
     }
 }
 
-extension HomeViewController: UICollectionViewDelegate{
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//            
-//            let width = self.view.frame.width - 16.0 * 2
-//            let height: CGFloat = 234.0
-//            
-//            return CGSize(width: width, height: height)
-//        }
-}
 
 
 //extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
