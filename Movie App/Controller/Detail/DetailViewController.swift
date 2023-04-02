@@ -9,18 +9,19 @@ import UIKit
 
 final class DetailViewController: UIViewController {
     
+    
     @IBOutlet private var movieNameLabel: UILabel!
     @IBOutlet private var movieImageView: UIImageView!
     @IBOutlet private var movieTimeLabel: UILabel!
     @IBOutlet private var movieRatingLabel: UILabel!
-    @IBOutlet private var movieDescription: UILabel!
-    
-    var img = UIImage()
-    var name = ""
-    var time = ""
-    var rating = ""
-    var synopsis = ""
-    var desc = ""
+    @IBOutlet private var movieDescription: UITextView!
+
+    var img: UIImage? = UIImage()
+    var name: String? = ""
+    var time: String? = ""
+    var rating: String? = ""
+    var synopsis: String? = ""
+    var desc: String? = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +34,7 @@ final class DetailViewController: UIViewController {
         movieTimeLabel.text = time
         movieRatingLabel.text = rating
         movieDescription.text = desc
+        
     }
     
     @IBAction func favoriteButtonTapped() {

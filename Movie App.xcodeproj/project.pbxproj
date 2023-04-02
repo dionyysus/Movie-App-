@@ -17,7 +17,6 @@
 		0AA05C6429C4F34000B16367 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AA05C6229C4F34000B16367 /* Main.storyboard */; };
 		0AA05C6629C4F34100B16367 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AA05C6529C4F34100B16367 /* Assets.xcassets */; };
 		0AA05C6929C4F34100B16367 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AA05C6729C4F34100B16367 /* LaunchScreen.storyboard */; };
-		0AAA3F6629D911A0003C4B58 /* Detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAA3F6529D911A0003C4B58 /* Detail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +32,6 @@
 		0AA05C6529C4F34100B16367 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0AA05C6829C4F34100B16367 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0AA05C6A29C4F34100B16367 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0AAA3F6529D911A0003C4B58 /* Detail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +75,6 @@
 			isa = PBXGroup;
 			children = (
 				0A71502329C5E0C600C553AE /* Movie.swift */,
-				0AAA3F6529D911A0003C4B58 /* Detail.swift */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
@@ -203,7 +200,6 @@
 			files = (
 				0A71502429C5E0C600C553AE /* Movie.swift in Sources */,
 				0A0BCF4529C5889B00536313 /* HomeViewController.swift in Sources */,
-				0AAA3F6629D911A0003C4B58 /* Detail.swift in Sources */,
 				0A0BCF4929C5931000536313 /* DetailViewController.swift in Sources */,
 				0AA05C5D29C4F34000B16367 /* AppDelegate.swift in Sources */,
 				0A0BCF4B29C594F200536313 /* FavoritesViewController.swift in Sources */,

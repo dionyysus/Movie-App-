@@ -33,7 +33,7 @@ extension HomeViewController: UICollectionViewDataSource{
         let movie = moviesArray[indexPath.row]
         
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "movieCell", for: indexPath) as? MovieCollectionViewCell else {
-            return .init() //bunu araştıracağım
+            return UICollectionViewCell() //bunu araştıracağım
         }
         
         cell.movieImageView.image = UIImage(named: movie.imageUrl)
@@ -48,6 +48,8 @@ extension HomeViewController: UICollectionViewDataSource{
         let movie = moviesArray[indexPath.row]
         
         guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController else { return }
+        
+
         
         vc.img = UIImage(named: movie.imageUrl)!
         vc.name = movie.name
