@@ -12,4 +12,5 @@ struct Movie {
     let time: String
     let rating: String
     let imageUrl: String
+    let desc: String
 }
