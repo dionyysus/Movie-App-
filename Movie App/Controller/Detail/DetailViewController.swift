@@ -7,41 +7,62 @@
 
 import UIKit
 
-final class DetailViewController: UIViewController {
-    
-    
+
+final class DetailViewController: BaseViewController {
     @IBOutlet private var movieNameLabel: UILabel!
     @IBOutlet private var movieImageView: UIImageView!
-    @IBOutlet private var movieTimeLabel: UILabel!
     @IBOutlet private var movieRatingLabel: UILabel!
-    @IBOutlet private var movieDescription: UITextView!
-
-    var img: UIImage? = UIImage()
-    var name: String? = ""
-    var time: String? = ""
-    var rating: String? = ""
-    var synopsis: String? = ""
-    var desc: String? = ""
+    @IBOutlet private var movieTimeLabel: UILabel!
+    @IBOutlet private var movieDescription: UILabel!
+    @IBOutlet private var moviePlayImageView: UIImageView!
+    @IBOutlet private var movieFavoriteImageView: UIImageView!
+    
+    var movie: Movie?
+    
+    var movieId: Int? = 0
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         //timeStackView.isHidden = true
-        self.title = "Star Wars: The Last Jedi"
-        self.navigationController?.navigationBar.topItem?.backButtonTitle = "Back"
+        navigationController?.navigationBar.topItem?.backButtonTitle = "Back"
         
-        movieNameLabel.text = name
-        movieImageView.image = img
-        movieTimeLabel.text = time
-        movieRatingLabel.text = rating
-        movieDescription.text = desc
+        movieNameLabel.text = movie?.name
+        movieImageView.image = UIImage(named: movie?.imageUrl ?? "")
+        movieTimeLabel.text = movie?.time
+        movieRatingLabel.text = movie?.rating
+        movieDescription.text = movie?.desc
+        title = movie?.name
         
-    }
-    
-    @IBAction func favoriteButtonTapped() {
-        print("favorite button tapped")
+        let tapFavorite = UITapGestureRecognizer(target: self, action: #selector(DetailViewController.favoriteTappedImageView))
+        let tapPlay = UITapGestureRecognizer(target: self, action: #selector(DetailViewController.playTappedImageView))
+        
+        movieFavoriteImageView.addGestureRecognizer(tapFavorite)
+        moviePlayImageView.addGestureRecognizer(tapPlay)
+        movieFavoriteImageView.isUserInteractionEnabled = true
+        moviePlayImageView.isUserInteractionEnabled = true
     }
 
-    @IBAction private func playButtonTapped() {
+    @objc func favoriteTappedImageView() {
+        print("favorite button tapped")
+        
+        let favoriteMovie = moviesArray.filter{$0.id == movieId}
+            
+        if MovieManager.shared.setFavoriteMovie(movie: favoriteMovie){
+            movieFavoriteImageView.image = UIImage(named: "heart-filled")
+        }
+        else{
+            movieFavoriteImageView.image = UIImage(named: "heart-akin")
+        }
+    }
+    @objc func playTappedImageView() {
         print("play button tapped")
     }
+    
+    func prepare(movie: Movie) {
+        self.movie = movie
+    }
+    
 }
+
+
